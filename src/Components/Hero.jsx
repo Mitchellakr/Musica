@@ -28,9 +28,7 @@ const Hero = () => {
             <img src={user5} alt="" className='ml-[-15px]' />
           </div>
           <img src={heart} alt="" />
-          <p>
-            33K Likes
-          </p>
+          <p>33K Likes</p>
         </div>
       </div>
     </div>

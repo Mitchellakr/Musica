@@ -35,7 +35,7 @@ const TopCharts = () => {
             {
                 topcharts.map((chart) => (
                     <div key={chart.id} className='mb-4 rounded-xl text-white bg-[#1A1E1F] p-4 flex items-center justify-between flex-grow'>
-                        <div className='flex items-center gap-3'>
+                        <div className='cursor-pointer flex items-center gap-3'>
                             <img src={chart.img} alt="" className='h-[60px]' />
                             <div>
                                 <h2>{chart.name}</h2>
@@ -43,9 +43,9 @@ const TopCharts = () => {
                                 <p className='text-sm'>{chart.timelapse}</p>
                             </div>
                         </div>
-                        <div className='p-2 border-solid border-[1px] border-red-400 rounded-full '>
+                        <button className='p-2 border-solid border-[1px] border-gray-700 rounded-full '>
                             <img src={like} alt="" />
-                        </div>
+                        </button>
                     </div>
                 ))
             }

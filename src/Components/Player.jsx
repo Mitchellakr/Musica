@@ -21,25 +21,11 @@ const Player = () => {
 
                 <div className="flex flex-col gap-6 justify-center items-center w-[70%]">
                     <div className="flex items-center gap-[3em] w-fit">
-                        <button>
-                            <img src={shuffle} alt="shuffle" />
-                        </button>
-
-                        <button>
-                            <img src={previous} alt="previous" />
-                        </button>
-
-                        <button className="rounded-full p-4 bg-yellow-300">
-                            <img src={play} alt="play" />
-                        </button>
-
-                        <button>
-                            <img src={next} alt="next" />
-                        </button>
-
-                        <button>
-                            <img src={repeat} alt="repeat" />
-                        </button>
+                        <button><img src={shuffle} alt="shuffle" /></button>
+                        <button><img src={previous} alt="previous" /></button>
+                        <button className="rounded-full p-4 bg-yellow-300"> <img src={play} alt="play" /> </button>
+                        <button>  <img src={next} alt="next" />   </button>
+                        <button> <img src={repeat} alt="repeat" /> </button>
                     </div>
 
                     {/* seeker slider */}
@@ -52,10 +38,8 @@ const Player = () => {
                 {/* volume slider */}
 
                 <div className="flex gap-4 items-center justify-center w-[15%]">
-                    <button>
-                        <img src={volume} alt="volume" />
-                    </button>
-                    <input type="range" className="w-full h-[3px] bg-green-400" />
+                    <button> <img src={volume} alt="volume" /> </button>
+                    <input type="range" className="w-full h-[3px]" />
                 </div>
             </div>
         </div>

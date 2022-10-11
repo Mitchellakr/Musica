@@ -5,7 +5,7 @@ import art3 from '../Assets/Images/musicArt/Art3.png'
 import art4 from '../Assets/Images/musicArt/Art4.png'
 import art5 from '../Assets/Images/musicArt/Art5.png'
 
-const newReleases = [
+const popularSongs = [
     {
         id: 1,
         img: art1,
@@ -68,23 +68,23 @@ const newReleases = [
     },
 ]
 
-const NewReleases = () => {
+const Popular = () => {
     return (
-        <div className='flex-grow mt-10'>
-            <h2 className='text-white text-2xl font-semibold'>New releases.</h2>
-            <div className="flex gap-6 items-center w-full overflow-x-auto mt-5 scrollbar-hide bar">
+        <div className='flex-grow mt-10 mb-[10em]'>
+            <h2 className='text-white text-2xl font-semibold'>Popular in your area.</h2>
+            <div className="flex gap-6 items-center w-full overflow-x-auto mt-5 bar">
                 {
-                    newReleases.map((release) => (
-                        <div key={release.id} className="cursor-pointer text-white min-w-fit">
-                            <img src={release.img} className='h-[200px] w-[200px]' alt="" />
-                            <p className='pt-2'>{release.title}</p>
-                            <p className='opacity-40'>{release.name}</p>
+                    popularSongs.map((popularsong) => (
+                        <div key={popularsong.id} className="cursor-pointer text-white min-w-fit">
+                            <img src={popularsong.img} className='h-[200px] w-[200px]' alt="" />
+                            <p className='pt-2'>{popularsong.title}</p>
+                            <p className='opacity-40'>{popularsong.name}</p>
                         </div>
                     ))
                 }
             </div>
-        </div >
+        </div>
     )
 }
 
-export default NewReleases
+export default Popular

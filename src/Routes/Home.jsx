@@ -4,6 +4,7 @@ import Hero from '../Components/Hero'
 import Navbar from '../Components/Navbar'
 import NewReleases from '../Components/NewReleases'
 import Player from '../Components/Player'
+import Popular from '../Components/Popular'
 import TopCharts from '../Components/TopCharts'
 
 const Home = () => {
@@ -20,9 +21,9 @@ const Home = () => {
                 </div>
                 <div className='container mx-auto mt-6 gap-[3em]'>
                     <NewReleases />
+                    <Popular />
                 </div>
             </div>
-
             <Player />
         </div>
     )
