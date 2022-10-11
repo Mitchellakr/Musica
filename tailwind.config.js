@@ -13,6 +13,7 @@ module.exports = {
         'Art4': "url('../src/Assets/Images/musicArt/Art4.png')",
         'Art5': "url('../src/Assets/Images/musicArt/Art5.png')",
         'Art6': "url('../src/Assets/Images/musicArt/Art6.png')",
+        'lead': "url('../src/Assets/Images/musicArt/Lead-image.png')",
       }
     },
   },

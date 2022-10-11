@@ -4,7 +4,7 @@ import search from '../Assets/Icons/search.svg'
 
 const Navbar = () => {
     return (
-        <div className='w-full container py-4 mx-auto flex items-center justify-start gap-[5em]'>
+        <div className='w-full container py-4 mx-auto flex items-center justify-start gap-[5em] z-50 relative'>
             <img src={logo} alt="logo" />
             <div className='flex items-center gap-5 w-full'>
                 <img src={search} alt="search" />
