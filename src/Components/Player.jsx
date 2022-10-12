@@ -9,7 +9,7 @@ import Art1 from '../Assets/Images/musicArt/Art1.png'
 
 const Player = () => {
     return (
-        <div className="fixed z-[50] left-0 bottom-0 w-full py-6 backdrop-blur-sm">
+        <div className="fixed px-4 z-[50] left-0 bottom-0 w-full py-6 backdrop-blur-sm">
             <div className="container mx-auto flex gap-4 justify-between items-center  ">
                 <div className="flex justify-center items-center gap-4 w-fit">
                     <img src={Art1} alt="current music" className='h-[50px] w-[50px] rounded-xl' />
@@ -20,24 +20,24 @@ const Player = () => {
                 </div>
 
                 <div className="flex flex-col gap-6 justify-center items-center w-[70%]">
-                    <div className="flex items-center gap-[3em] w-fit">
-                        <button><img src={shuffle} alt="shuffle" /></button>
-                        <button><img src={previous} alt="previous" /></button>
+                    <div className="ml-auto sm:ml-0 flex items-center gap-6 sm:gap-[3em] w-fit">
+                        <button className='hidden sm:flex'><img src={shuffle} alt="shuffle" /></button>
+                        <button className='hidden sm:flex'><img src={previous} alt="previous" /></button>
                         <button className="rounded-full p-4 bg-yellow-300"><img src={play} alt="play" /> </button>
                         <button><img src={next} alt="next" />   </button>
-                        <button><img src={repeat} alt="repeat" /> </button>
+                        <button className='hidden sm:flex'><img src={repeat} alt="repeat" /> </button>
                     </div>
 
                     {/* seeker slider */}
 
-                    <div className="flex gap-4 items-center w-full">
+                    <div className="hidden sm:flex gap-4 items-center w-full">
                         <input type="range" className="w-full h-[3px]" />
                     </div>
                 </div>
 
                 {/* volume slider */}
 
-                <div className="flex gap-4 items-center justify-center w-[15%]">
+                <div className="hidden sm:flex gap-4 items-center justify-center w-[15%]">
                     <button> <img src={volume} alt="volume" /> </button>
                     <input type="range" className="w-full h-[3px]" />
                 </div>

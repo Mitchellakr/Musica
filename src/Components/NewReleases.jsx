@@ -76,7 +76,7 @@ const NewReleases = () => {
                 {
                     newReleases.map((release) => (
                         <div key={release.id} className="cursor-pointer text-white min-w-fit">
-                            <img src={release.img} className='h-[200px] w-[200px]' alt="" />
+                            <img src={release.img} className='md:h-[200px] md:w-[200px]' alt="" />
                             <p className='pt-2'>{release.title}</p>
                             <p className='opacity-40'>{release.name}</p>
                         </div>

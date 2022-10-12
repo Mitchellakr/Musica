@@ -76,7 +76,7 @@ const Popular = () => {
                 {
                     popularSongs.map((popularsong) => (
                         <div key={popularsong.id} className="cursor-pointer text-white min-w-fit">
-                            <img src={popularsong.img} className='h-[200px] w-[200px]' alt="" />
+                            <img src={popularsong.img} className='md:h-[200px] md:w-[200px]' alt="" />
                             <p className='pt-2'>{popularsong.title}</p>
                             <p className='opacity-40'>{popularsong.name}</p>
                         </div>

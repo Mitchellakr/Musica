@@ -15,7 +15,7 @@ const ChartTop = () => {
                 <p className='text-white opacity-80 pb-8 text-sm'>64 songs ~ 16 hrs+</p>
                 <div className="text-white text-sm relative z-[100] flex gap-2 items-center">
                     <button className='flex gap-2 items-center rounded-full py-2 px-4 bg-gray-600'>
-                        <button className="rounded-full p-1 bg-yellow-300"><img src={play} alt="play" /> </button>
+                        <div className="rounded-full p-1 bg-yellow-300"><img src={play} alt="play" /> </div>
                         <p>play all</p>
                     </button>
                     <button className='flex items-center gap-2 rounded-full py-2 px-4 bg-gray-600'>

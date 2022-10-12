@@ -14,12 +14,12 @@ const Home = () => {
             <div className="w-full">
                 <div className="container mx-auto mt-6 flex gap-[3em]">
                     <Aside />
-                    <div className='w-full gap-10 flex'>
+                    <div className='md:flex w-full gap-10 block px-4'>
                         <Hero />
                         <TopCharts />
                     </div>
                 </div>
-                <div className='container mx-auto mt-6 gap-[3em]'>
+                <div className='container mx-auto mt-6 gap-[3em] px-4'>
                     <NewReleases />
                     <Popular />
                 </div>

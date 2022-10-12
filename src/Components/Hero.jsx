@@ -8,12 +8,12 @@ import heart from '../Assets/Icons/Heart.svg'
 
 const Hero = () => {
   return (
-    <div className='bg-[#609EAF] rounded-[2.5em] p-10 relative w-[60%] text-white bg-heroImage bg-no-repeat bg-cover'>
-      <div className="h-full w-[50%] flex flex-col justify-between ">
+    <div className='bg-[#609EAF] rounded-[2.5em] p-10 relative w-full md:w-[60%] h-[450px] mb-8 text-white bg-none md:bg-heroImage bg-no-repeat bg-cover '>
+      <div className="h-full w-full lg:w-[50%] flex flex-col justify-between ">
         <p>Currated playlist</p>
 
         {/* heading */}
-        <div>
+        <div className='mt-auto pb-8 md:mt-0 md:pb-0'>
           <h2 className='text-3xl font-semibold'>R &amp; B Hits</h2>
           <p>All mine, Lie again, Petty call me everyday, Out of time, No love, Bad habit, and so much more</p>
         </div>

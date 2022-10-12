@@ -2,7 +2,7 @@ import React from 'react'
 import like from '../Assets/Icons/like.svg'
 import art from '../Assets/Images/musicArt/Art5.png'
 import art2 from '../Assets/Images/musicArt/Art2.png'
-import art4 from '../Assets/Images/musicArt/Art4.png'
+import lead from '../Assets/Images/musicArt/Lead-image.png'
 import { Link } from 'react-router-dom'
 
 const topcharts = [
@@ -22,10 +22,10 @@ const topcharts = [
     },
     {
         id: 3,
-        name: 'Tomorrows tunes',
+        name: "Tomorrow's tunes",
         artist: 'Obi Datti',
         timelapse: '2:01:25',
-        img: art4
+        img: lead
     }
 ]
 
@@ -35,9 +35,9 @@ const TopCharts = () => {
             <h3 className='pb-4 text-white text-2xl font-semibold'>Top charts</h3>
             {
                 topcharts.map((chart) => (
-                    <div key={chart.id} className='mb-4 rounded-xl text-white bg-[#1A1E1F] p-4 flex items-center justify-between flex-grow'>
-                        <Link to='/charts' className='cursor-pointer flex items-center gap-3'>
-                            <img src={chart.img} alt="" className='h-[60px]' />
+                    <div key={chart.id} className='mb-4 rounded-xl text-white bg-[#1A1E1F] p-4 flex items-start md:items-center justify-between flex-grow'>
+                        <Link to='/charts' className='cursor-pointer block md:flex items-center gap-3'>
+                            <img src={chart.img} alt="" className='h-[100px] md:h-[60px]' />
                             <div>
                                 <h2>{chart.name}</h2>
                                 <p className='text-sm text-[#efeee140]'>{chart.artist}</p>
@@ -55,3 +55,4 @@ const TopCharts = () => {
 }
 
 export default TopCharts
+

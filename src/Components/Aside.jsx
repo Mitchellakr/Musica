@@ -33,7 +33,7 @@ const navlinks = [
 
 const Aside = () => {
   return (
-    <div className='sticky w-fit flex-none flex flex-col gap-4'>
+    <div className='hidden sticky w-fit flex-none md:flex flex-col gap-4'>
 
       {/* first nav */}
 
