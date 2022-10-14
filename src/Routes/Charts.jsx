@@ -12,7 +12,7 @@ const Charts = () => {
             <div className="w-full">
                 <div className="container mx-auto mt-6 flex gap-[3em]">
                     <Aside />
-                    <div className='w-full gap-10'>
+                    <div className=' w-full gap-10'>
                         <ChartTop/>
                         <Chartbottom />
                     </div>

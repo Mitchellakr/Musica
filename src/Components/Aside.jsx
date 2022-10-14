@@ -37,7 +37,7 @@ const Aside = () => {
 
       {/* first nav */}
 
-      <div className="py-4 px-1 justify-center flex flex-col items-center gap-6 rounded-full bg-[#1A1E1F]">
+      <div className="py-4 px-2 justify-center flex flex-col items-center gap-6 rounded-full bg-[#1A1E1F]">
         {
           navlinks.map((link) => (
             <Link key={link.id} to={link.path}><img src={link.icon} alt="" /></Link>
@@ -47,7 +47,7 @@ const Aside = () => {
 
       {/* second nav */}
 
-      <div className="py-4 px-1 justify-center flex flex-col items-center gap-6 rounded-full bg-[#1A1E1F]">
+      <div className="py-4 px-2 justify-center flex flex-col items-center gap-6 rounded-full bg-[#1A1E1F]">
         <img src={profile} alt="" />
         <img src={logout} alt="" />
       </div>

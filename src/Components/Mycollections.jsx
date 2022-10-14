@@ -26,11 +26,12 @@ const mycollection = [
 
 const Mycollections = () => {
     return (
-        <>
+        <div className='block w-full sm:flex sm:flex-wrap px-6 pt-6 items-center gap-6 mb-[8em]'>
             {
                 mycollection.map((collection) => (
-                    <div key={collection.id} className={`cursor-pointer group overflow-hidden relative rounded-3xl w-[260px] h-[260px] bg-no-repeat bg-cover before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-1/2 before:z-10 before:bg-gradient-to-t before:from-black`}>
-                        <img src={collection.bg} alt="" className='absolute top-0 right-0 w-full h-full transition-all duration-300 group-hover:scale-150' />
+                    <div key={collection.id} className={`mb-6 cursor-pointer group overflow-hidden relative rounded-3xl w-full h-[220px] sm:w-[220px] before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-1/2 before:z-10 before:bg-gradient-to-t before:from-black`}>
+                        <div className='w-full h-full bg-Art5 bg-no-repeat bg-center bg-cover group-hover:scale-150 transition-all duration-300 '><img className='w-full' src={collection.bg} alt="" /></div>
+                        {/* <div className={`w-full h-full bg-Art5 bg-no-repeat bg-center bg-cover group-hover:scale-150 transition-all duration-300`}></div> */}
                         <div className='absolute bottom-6 px-6 left-0 w-full flex items-center justify-between'>
                             <div className='z-20 text-white '>
                                 <h2 className='text-2xl'>Limits</h2>
@@ -43,8 +44,10 @@ const Mycollections = () => {
                     </div>
                 ))
             }
-        </>
+        </div>
     )
+
+
 }
 
 export default Mycollections

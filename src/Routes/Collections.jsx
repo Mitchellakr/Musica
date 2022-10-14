@@ -12,11 +12,11 @@ const Collections = () => {
                 <div className="container mx-auto mt-6 flex gap-[3em]">
                     <Aside />
                     <div className='w-full gap-10'>
-                        <div className='flex items-center gap-4'>
-                            <button className='py-2 px-6 rounded-full bg-[#FACD66]'>My collection</button>
-                            <button className='py-2 px-6 rounded-full border border-white border-solid opacity-20 text-white'>Likes</button>
+                        <div className='w-full flex items-center gap-4 px-6'>
+                            <button className='w-full py-2 sm:w-fit sm:px-6 rounded-full bg-[#FACD66]'>My collection</button>
+                            <button className='w-full py-2 sm:w-fit sm:px-6 rounded-full border border-white border-solid opacity-20 text-white'>Likes</button>
                         </div>
-                        <div className='py-6 flex items-center gap-6'>
+                        <div>
                             <Mycollections />
                         </div>
                     </div>

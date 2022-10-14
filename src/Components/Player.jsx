@@ -5,14 +5,14 @@ import play from '../Assets/Icons/Play.svg'
 import next from '../Assets/Icons/next.svg'
 import volume from '../Assets/Icons/volume.svg'
 import repeat from '../Assets/Icons/repeat.svg'
-import Art1 from '../Assets/Images/musicArt/Art1.png'
+import Art8 from '../Assets/Images/musicArt/Art8.png'
 
 const Player = () => {
     return (
         <div className="fixed px-4 z-[50] left-0 bottom-0 w-full py-6 backdrop-blur-sm">
             <div className="container mx-auto flex gap-4 justify-between items-center  ">
                 <div className="flex justify-center items-center gap-4 w-fit">
-                    <img src={Art1} alt="current music" className='h-[50px] w-[50px] rounded-xl' />
+                    <img src={Art8} alt="current music" className='h-[50px] w-[50px] rounded-xl' />
                     <div className="flex flex-col items-start justify-center w-fit">
                         <p className="text-white w-full">Seasons in</p>
                         <label className="text-[#B3B3B3] w-full">James</label>
@@ -42,7 +42,7 @@ const Player = () => {
                     <input type="range" className="w-full h-[3px]" />
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

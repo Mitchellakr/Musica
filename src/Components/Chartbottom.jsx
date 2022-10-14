@@ -51,20 +51,45 @@ const songs = [
 ]
 const Chartbottom = () => {
     return (
-        <div className='py-10 z-[1] relative pb-[8em]'>
-            {songs.map((song) => (
-                <div key={song.id} className='grid grid-cols-5 items-center justify-between p-3 mb-4 rounded-lg bg-[#25292a] text-white'>
-                    <div className='flex items-center gap-3'>
-                        <img src={song.img} className='h-[50px] w-[50px] rounded-xl' alt="" />
-                        <button><img src={heart} alt="" /></button>
+        <>
+
+            {/* Desktop view */}
+
+            <div className='hidden md:block py-10 z-[1] relative pb-[8em]'>
+                {songs.map((song) => (
+                    <div key={song.id} className='grid grid-cols-5 items-center justify-between p-3 mb-4 rounded-lg bg-[#25292a] text-white'>
+                        <div className='flex items-center gap-3'>
+                            <img src={song.img} className='h-[50px] w-[50px] rounded-xl' alt="" />
+                            <button><img src={heart} alt="" /></button>
+                        </div>
+                        <p className='opacity-60'>{song.title} ~ {song.artist}</p>
+                        <p className='justify-self-center opacity-60'>{song.soa}</p>
+                        <p className='justify-self-end opacity-60'>{song.timelapse}</p>
+                        <button className='justify-self-end'><img src={more} alt="" /></button>
                     </div>
-                    <p>{song.title} ~ {song.artist}</p>
-                    <p className='justify-self-center'>{song.soa}</p>
-                    <p className='justify-self-end'>{song.timelapse}</p>
-                    <button className='justify-self-end'><img src={more} alt="" /></button>
-                </div>
-            ))}
-        </div>
+                ))}
+            </div>
+
+            {/* mobile view */}
+
+            <div className='block md:hidden py-10 z-[1] relative pb-[8em] px-6'>
+                {songs.map((song) => (
+                    <div key={song.id} className='flex items-center justify-between p-3 mb-4 rounded-lg bg-[#25292a] text-white'>
+                        <div className='flex items-center gap-3'>
+                            <img src={song.img} className='h-[50px] w-[50px] rounded-xl' alt="" />
+                            <div>
+                                <p className='py-[1px] opacity-60'>{song.title} ~ {song.artist}</p>
+                                <p className='py-[1px] opacity-60'>{song.soa}</p>
+                            </div>
+                        </div>
+                        <div>
+                            <button className='justify-self-end'><img src={more} alt="" /></button>
+                            <p className='justify-self-end opacity-60'>{song.timelapse}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </>
     )
 }
 
