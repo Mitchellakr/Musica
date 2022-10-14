@@ -9,7 +9,7 @@ import Art8 from '../Assets/Images/musicArt/Art8.png'
 
 const Player = () => {
     return (
-        <div className="fixed px-4 z-[50] left-0 bottom-0 w-full py-6 backdrop-blur-sm">
+        <div className="fixed px-4 z-[10] left-0 bottom-0 w-full py-6 backdrop-blur-sm">
             <div className="container mx-auto flex gap-4 justify-between items-center  ">
                 <div className="flex justify-center items-center gap-4 w-fit">
                     <img src={Art8} alt="current music" className='h-[50px] w-[50px] rounded-xl' />

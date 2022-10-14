@@ -22,7 +22,7 @@ const navlinks = [
         id: 2,
         icon: playlist,
         path: '/Collections',
-        name: 'Playlist'
+        name: 'My collections'
     },
     {
         id: 3,
@@ -56,11 +56,10 @@ const Navbar = () => {
 
     const handleNav = () => {
         setNav(!nav)
-        console.log(!nav);
     }
     return (
         <div className='w-full container py-4 mx-auto flex items-center justify-start gap-6 md:gap-[5em] z-50 relative px-4'>
-            <button onClick={handleNav} className='block z-[999] md:hidden'>
+            <button onClick={handleNav} className='block md:hidden'>
                 <div className='h-1 w-7 bg-white mb-1'></div>
                 <div className='h-1 w-7 bg-white mt-1'></div>
             </button>
@@ -72,7 +71,9 @@ const Navbar = () => {
 
             {/* mobile menu */}
 
-            <div className={`${nav ? 'block' : 'hidden'} md:hidden absolute text-white top-0 left-0 w-full h-screen bg-[#1D2123] z-[90] p-20 pt-40`}>
+            <div className={`${nav ? 'block' : 'hidden'} md:hidden fixed text-white top-0 left-0 w-full h-screen bg-[#1D2123] z-[900] p-10 pt-20`}>
+
+                <button onClick={handleNav} className='absolute top-6 right-6'>close</button>
                 {
                     navlinks.map((link) => (
                         <Link key={link.id} to={link.path} onClick={handleNav} className='flex gap-4 items-center pb-16'><img src={link.icon} alt="" className='w-[30px]' /><p className="text-2xl text-white">{link.name}</p></Link>
