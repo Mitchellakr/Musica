@@ -3,10 +3,16 @@ import Aside from '../Components/Aside'
 import Mycollections from '../Components/Mycollections'
 import Navbar from '../Components/Navbar'
 import Player from '../Components/Player'
+import { motion } from 'framer-motion'
 
 const Collections = () => {
     return (
-        <div className='w-full'>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className='w-full'
+        >
             <Navbar />
             <div className="w-full">
                 <div className="container mx-auto mt-6 flex gap-[3em]">
@@ -23,7 +29,7 @@ const Collections = () => {
                 </div>
             </div>
             <Player />
-        </div>
+        </motion.div>
     )
 }
 

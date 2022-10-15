@@ -7,9 +7,16 @@ import Player from '../Components/Player'
 import Popular from '../Components/Popular'
 import TopCharts from '../Components/TopCharts'
 
+import { motion } from 'framer-motion'
+
 const Home = () => {
     return (
-        <div className='w-full'>
+        <motion.div
+            className='w-full'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
             <Navbar />
             <div className="w-full">
                 <div className="container mx-auto mt-6 flex gap-[3em]">
@@ -25,7 +32,7 @@ const Home = () => {
                 </div>
             </div>
             <Player />
-        </div>
+        </motion.div>
     )
 }
 
