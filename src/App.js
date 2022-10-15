@@ -3,7 +3,6 @@ import Home from './Routes/Home';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Collections from './Routes/Collections';
 import Charts from './Routes/Charts';
-
 import { AnimatePresence } from 'framer-motion'
 
 export default function App() {

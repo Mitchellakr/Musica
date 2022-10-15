@@ -11,7 +11,7 @@ const Charts = () => {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            transition={{ duration: 2, ease: 'easeInOut' }}
             className='w-full bg-lead bg-no-repeat bg-cover relative  before:content-[""] before:absolute before:bottom-0 before:left-0 before:z[10] before:w-full before:h-full before:bg-[#1e1e1ee3]'
         >
             <Navbar />

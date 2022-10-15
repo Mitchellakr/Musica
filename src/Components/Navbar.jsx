@@ -53,16 +53,18 @@ const navlinks = [
 const Navbar = () => {
 
     const [nav, setNav] = React.useState(false)
+    const handleNav = () => setNav(!nav)
 
-    const handleNav = () => {
-        setNav(!nav)
-    }
     return (
         <div className='w-full container py-4 mx-auto flex items-center justify-start gap-6 md:gap-[5em] z-50 relative px-4'>
+
+            {/* burger menu */}
+
             <button onClick={handleNav} className='block md:hidden'>
                 <div className='h-1 w-7 bg-white mb-1'></div>
                 <div className='h-1 w-7 bg-white mt-1'></div>
             </button>
+
             <img src={logo} alt="logo" />
             <div className='flex items-center gap-5 w-fit md:w-full  ml-auto'>
                 <img src={search} alt="search" className='md:w-4 w-[30px]' />
@@ -71,8 +73,7 @@ const Navbar = () => {
 
             {/* mobile menu */}
 
-            <div className={`${nav ? 'block' : 'hidden'} md:hidden fixed text-white top-0 left-0 w-full h-screen bg-[#1D2123] z-[900] p-10 pt-20`}>
-
+            <div className={`${nav ? 'translate-x-0 opacity-100' : 'translate-x-[-100%] opacity-0'} transition-all duration-500 md:hidden fixed text-white top-0 left-0 w-full h-screen bg-[#1D2123] z-[900] p-10 pt-20`}>
                 <button onClick={handleNav} className='absolute top-6 right-6'>close</button>
                 {
                     navlinks.map((link) => (

@@ -20,6 +20,9 @@ const Player = () => {
                 </div>
 
                 <div className="flex flex-col gap-6 justify-center items-center w-[70%]">
+
+                    {/* control buttons */}
+                    
                     <div className="ml-auto sm:ml-0 flex items-center gap-6 sm:gap-[3em] w-fit">
                         <button className='hidden sm:flex'><img src={shuffle} alt="shuffle" /></button>
                         <button className='hidden sm:flex'><img src={previous} alt="previous" /></button>
