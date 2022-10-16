@@ -30,14 +30,14 @@ const topcharts = [
 ]
 
 const TopCharts = () => {
+
     return (
         <div className='flex-grow'>
             <h3 className='pb-4 text-white text-2xl font-semibold'>Top charts</h3>
             {
                 topcharts.map((chart) => (
-
                     <div key={chart.id} className='mb-4 rounded-xl text-white bg-[#1A1E1F] p-4 flex items-start md:items-center justify-between flex-grow'>
-                        <Link onClick={(e) => { console.log(chart) }} to='/charts' className='cursor-pointer block md:flex items-center gap-3'>
+                        <Link to='/charts' state={{ chart }} className='cursor-pointer block md:flex items-center gap-3'>
                             <img src={chart.img} alt="" className='h-[100px] md:h-[60px]  rounded-xl' />
                             <div>
                                 <h2>{chart.name}</h2>
@@ -51,7 +51,7 @@ const TopCharts = () => {
                     </div>
                 ))
             }
-        </div>
+        </div >
     )
 }
 
