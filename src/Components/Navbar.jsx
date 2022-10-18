@@ -55,6 +55,9 @@ const Navbar = () => {
     const [nav, setNav] = React.useState(false)
     const handleNav = () => setNav(!nav)
 
+    const [searchbox, setSearchbox] = React.useState(false)
+    const searchControl = () => setSearchbox(!searchbox)
+
     return (
         <div className='w-full container py-4 mx-auto flex items-center justify-start gap-6 md:gap-[5em] z-50 relative px-4'>
 
@@ -67,8 +70,8 @@ const Navbar = () => {
 
             <img src={logo} alt="logo" />
             <div className='flex items-center gap-5 w-fit md:w-full  ml-auto'>
-                <img src={search} alt="search" className='md:w-4 w-[30px]' />
-                <input type="text" placeholder='Search artists' className='bg-[transparent] text-white hidden md:block ' />
+                <img src={search} alt="search" onClick={searchControl} className='md:w-4 w-[30px]' />
+                <input type="text" placeholder='Search artists' className={`bg-[transparent] text-white ${searchbox ? 'block' : 'hidden'} md:block `} />
             </div>
 
             {/* mobile menu */}
